@@ -1,4 +1,5 @@
 use components::while_if::fb_whileif;
+use components::for_range::fb_forrange;
 
 use std::env::args;
 
@@ -13,7 +14,9 @@ fn main() {
     println!("answer is {}", answer);
 
     if variety == "while_if" {
-        println!("{:?}", fb_whileif(answer));
+        fb_whileif(answer);
+    } else if variety == "for_range" {
+        fb_forrange(answer);
     }
 }
 
