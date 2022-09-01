@@ -1,5 +1,3 @@
-
-
 pub fn fb_whileif(num: u32) {
     println!("while_if for fizz_buzz {}", num);
 
