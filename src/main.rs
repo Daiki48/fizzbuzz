@@ -1,19 +1,18 @@
 use components::while_if::fb_whileif;
 use components::for_range::fb_forrange;
 
-// use std::env::args;
-
 mod components;
 
 fn main() {
-    // let variety = args().nth(1).expect("Please specify an mode.");
-    // println!("Variety is {}", &variety);
-
     println!("Which FizzBuzz process do you want to check?");
     println!("(1) while_if");
     println!("(2) for_range");
     let variety = get_variety();
-    println!("variety is {}", variety);
+    if variety == 1 {
+        println!("variety is while_if");
+    } else if variety == 2 {
+        println!("variety is for_range");
+    }
 
     println!("How many times do you repeat?");
     let answer = get_entry();
