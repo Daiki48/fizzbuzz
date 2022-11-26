@@ -8,15 +8,15 @@ fn main() {
     println!("Which FizzBuzz process do you want to check?");
     println!("(1) while_if");
     println!("(2) for_range");
-    println!("(3) match");
+    println!("(3) for_match");
+    
     let variety = get_variety();
-    if variety == 1 {
-        println!("variety is while_if");
-    } else if variety == 2 {
-        println!("variety is for_range");
-    } else if variety == 3 {
-        println!("variety is match");
-    }
+    match variety {
+        1 => println!("variety is while_if"),
+        2 => println!("variety is for_range"),
+        3 => println!("variety is for_match"),
+        _ => println!("Not Found"),
+    };
 
     println!("How many times do you repeat?");
     let answer = get_entry();
